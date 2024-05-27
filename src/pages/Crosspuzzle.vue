@@ -15,12 +15,6 @@
     </div>
 
     <div class="col">
-
-      
-        <!-- <div v-if="isLoading" class="loader">
-
-        </div> -->
-
         <div v-if="puzzleGrid.length > 0" class="puzzle-container q-mt-xl q-pt-xl">
             <table class="puzzle-grid" style="border: none;">
                 <tbody>
@@ -34,8 +28,8 @@
                 </tbody>
             </table><br>
 
-            <button @click="showAnswer"> Show Answer</button>&nbsp;&nbsp;
-            <button @click="hideAnswer"> Hide Answer</button>
+            <button style="color: blue;" @click="showAnswer"> Show Answer</button>&nbsp;&nbsp;
+            <button style="color: blue;" @click="hideAnswer"> Hide Answer</button>
         </div>
     </div>
 </div>
@@ -51,7 +45,6 @@ export default {
             puzzleGrid: [],
             showPuzzle: false,
             inputbox: true,
-            isLoading: false,
             show: false,
         };
     },
@@ -191,20 +184,6 @@ export default {
             return true;
         },
 
-        // generatePuzzleWithLoader() {
-        //     // Toggle isLoading to true when generating puzzle
-        //     this.isLoading = true;
-
-        //     // Show loader for 5 seconds
-        //     setTimeout(() => {
-        //         // Toggle isLoading to false after 5 seconds
-        //         this.isLoading = false;
-
-        //         // Call the original generatePuzzle method
-        //         this.generatePuzzle();
-        //     }, 3000); // Loader duration is 5 seconds
-        // },
-
         placeWord(word, row, col, dRow, dCol) {
             const splitter = new GraphemeSplitter();
             const wordArray = splitter.splitGraphemes(word); // Split word into graphemes
@@ -272,31 +251,6 @@ export default {
     background-color: rgb(183, 183, 253);
 }
 
-.loader {
-    /* Add styling for the loader icon */
-    width: 50px;
-    height: 50px;
-    border: 5px solid #f3f3f3;
-    border-top: 5px solid #3498db;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin: 20px auto;
-}
-
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.pm {
-    margin-top: 300px;
-    font-size: 50px;
-}
 
 /* Style for highlighting the first word */
 </style>
