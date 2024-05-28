@@ -1,7 +1,7 @@
 <template>
 <div class="row">
-    <div class="col">
-        <h4 class="text-center align-center"><b> Puzzle Maker</b></h4>
+    <div class="col-md-6">
+        <h3 class="text-center align-center"><b> Puzzle Maker</b></h3>
         <div class="text-center">
             <img src="/src/assets/Sudoku-rafiki.png" style="width: 400px; height: 400px;">
         </div>
@@ -14,7 +14,7 @@
         </div>
     </div>
 
-    <div class="col">
+    <div class="col-md-6">
         <div v-if="puzzleGrid.length > 0" class="puzzle-container q-mt-xl q-pt-xl">
             <table class="puzzle-grid" style="border: none;">
                 <tbody>
