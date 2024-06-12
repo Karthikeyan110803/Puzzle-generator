@@ -251,6 +251,4 @@ export default {
     background-color: rgb(183, 183, 253);
 }
 
-
-/* Style for highlighting the first word */
 </style>
